@@ -457,28 +457,28 @@ const runners = [
 
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName.
-let fullName = runners.forEach(runner => {
+const fullName = runners.forEach(runner => {
   console.log(`${runner.first_name} ${runner.last_name}`);
 });
 console.log(fullName);
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
-let allCaps = runners.map(runner => {
+const allCaps = runners.map(runner => {
   return `${runner.first_name}`.toUpperCase();
 });
 console.log(allCaps);
 
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue.  Get a list of runners with large sized shirts so they can choose a different size. Return an array named largeShirts that contains information about the runners that have a shirt size of L and log the result
-let largeShirts = runners.filter(runner => {
+const largeShirts = runners.filter(runner => {
   return runner.shirt_size === 'L';
 });
 console.log(largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
-let ticketPriceTotal = runners.reduce((accumulator, currentItem) => {
+const ticketPriceTotal = runners.reduce((accumulator, currentItem) => {
   return accumulator + currentItem.donation;
 }, 0);
 console.log(ticketPriceTotal);
@@ -488,14 +488,14 @@ console.log(ticketPriceTotal);
 
 // Problem 1 All of the XL shirts have been lost and you need to give me the people that need extra large shirts now.
 
-let newExtraLarge = runners.filter(runner => {
+const newExtraLarge = runners.filter(runner => {
   return runner.shirt_size === 'XL';
 });
 console.log(newExtraLarge);
 
 // Problem 2 For some reason we now need to sort all  of the emails in alphabetical order. I need it asap can you figure this out?.
 
-let emailList = runners
+const emailList = runners
   .map(email => {
     return `${email.email}`;
   })
@@ -504,7 +504,7 @@ let emailList = runners
 console.log(emailList);
 
 // Problem 3 please list the runners with donations equal to or above $100;
-let OverOneHundred = runners.filter(percent => {
+const OverOneHundred = runners.filter(percent => {
   return percent.donation >= '100';
 });
 
